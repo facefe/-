@@ -1,0 +1,30 @@
+.wrapper {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+
+.inner {
+    width: 200px;
+    height: 200px;
+    background: deeppink;
+    animation: move 2s ease-in-out 0s infinite;
+    transform: translateY('0deg');
+
+
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0deg);
+    }
+
+    to {
+        transform: translateY(360deg);
+    }
+}

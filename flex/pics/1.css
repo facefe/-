@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 600px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .inner {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.wrapper .inner .content {
+    display: flex;
+    width: 16%;
+    height: 100%;
+    opacity: 0.5;
+    /* border: 1px solid yellow; */
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear;
+
+}
+
+.wrapper .inner .content:hover {
+    opacity: 1;
+}
+
+.wrapper .inner .content:nth-child(1) {
+    background-image: url('./0.jpg');
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 0s;
+
+}
+
+.wrapper .inner .content:nth-child(2) {
+    background-image: url('./1.png');
+    background-position: 70%;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 0.3s;
+
+}
+
+.wrapper .inner .content:nth-child(3) {
+    background-image: url('./2.png');
+    background-position: 40%;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 0.5s;
+
+}
+
+.wrapper .inner .content:nth-child(4) {
+    background-image: url('./3.jpg');
+    background-position: 60%;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 0.7s;
+
+}
+
+.wrapper .inner .content:nth-child(5) {
+    background-image: url('./8.jpg');
+    background-position: 35%;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 0.9s;
+
+}
+
+.wrapper .inner .content:nth-child(6) {
+    background-image: url('./6.jpg');
+    background-position: 30%;
+    transition: height 1s linear, width 1s linear 0.4s, transform 1s linear 1s;
+
+}
+
+/*下面开始做动画 */
+.wrapper .inner li.active {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.wrapper-inner .inner li:not(.active) {
+    width: 0px;
+    height: 0px;
+}
+
+/* 写一下进入界面的函数 */
+
+.wrapper .start {
+
+    transform: translateY(100%);
+    transition: transform 1s linear;
+}

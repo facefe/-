@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            margin: 50px;
+            animation: move 5s linear -4s 5 alternate;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            0% {
+                /* 要使元素移动必须为元素添加定位，才能使用top left right bottom  */
+                top: 0px;
+                left: 0px;
+                transform: rotate3d(0, 0, 360deg);
+                background-color: blue;
+            }
+            25% {
+                top: 0px;
+                left: 199px;
+                background-color: orange;
+            }
+            50% {
+                top: 199px;
+                left: 199px;
+                background-color: red;
+            }
+
+            75% {
+                top: 199px;
+                left: 0px;
+                background-color: black;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+                background-color: pink;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        @keyframes规定动画
+    </p>
+    <ul>
+        <li>animation-name</li>
+        <li>animation-duration 动画完成一个周期所需的时间
+
+        </li>
+        <li>animation-timing-function 规定动画的速度曲线
+            <br>linear 匀速
+            <br>ease默认 以低速开始，然后加快，在结束前变慢。
+            <br>ease-in 动画以低速开始
+            <br>sase-out 动画以低速结束
+            <br>ease-in-out 动画以低速开始和结束
+        </li>
+        <li>animation-delay 规定动画什么时间开始
+            <br>允许为负值，就是当一个动画持续时间为五秒时，以-2秒开始，就是默认跳过前两秒，默认从第三秒开始。
+        </li>
+        <li>animation-iteration-count 规定动画播放的次数
+            <br>infinte规定动画为无限次播放。
+        </li>
+        <li>animation-direction规定动画是否在下一周期逆向的播放
+            <br>normal默认
+            <br>alternate动画应该轮流反向播放。
+        </li>
+        <li>animation-play-state 规定动画是否正在运行或者暂停
+            <br>pause规定动画已暂停。
+            <br>running 规定动画正在播放。
+        </li>
+        <li>animation-fill-mode规定动画时间之外的状态
+            <br>看不明白，以后再看吧。
+        </li>
+    </ul>
+
+    <p>animation 将除了animation-play-state 之外的属性简写
+        <br>语法animation :name duration timing-function delay iteration-count direction
+        <br>animation :name 完成动画所需时间 速度曲线 开始时间 动画播放次数 是否逆向播放
+    </p>
+
+    <p>一个小栗子</p>
+    <div class="box"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

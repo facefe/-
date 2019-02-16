@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 450px;
+    /* height: 300px; */
+    margin: 50px;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.wrapper .input {
+    width: 95%;
+    /* border: 1px solid deeppink; */
+    margin: 5px auto;
+    height: 40px;
+    display: flex;
+}
+
+.wrapper .input .search {
+    flex: 1.5;
+    padding-left: 10px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.wrapper .input ul {
+    flex: 1;
+    margin-left: 3px;
+    /* border: 1px solid black; */
+}
+
+.wrapper .input ul li {
+    height: 92%;
+    padding: 0 5px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    line-height: 37px;
+    font-size: 16px;
+}
+
+.wrapper .list .list-ul .list-li {
+    width: 95%;
+    height: 50px;
+    border: 2px solid #ccd;
+    margin: auto auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+
+}
+
+.wrapper .list .list-ul .list-li .img {
+    display: inline-block;
+}
+
+.wrapper .list .list-ul .list-li .img img {
+    display: inline-block;
+    height: 45px;
+    width: 30px;
+    border: 1px solid #ccc;
+    margin: 2px 5px;
+    border-radius: 5px;
+
+}
+
+.wrapper .list .list-ul .list-li .name {
+    display: inline-block;
+    /* border: 1px solid red; */
+    height: 95%;
+    margin: 0;
+    padding: 0 10px;
+    vertical-align: top;
+    line-height: 48px;
+}
+
+.wrapper .list .list-ul .list-li .des {
+    display: inline-block;
+    /* border: 1px solid red; */
+    height: 95%;
+    margin: 0;
+    padding: 0 10px;
+    vertical-align: top;
+    line-height: 48px;
+}

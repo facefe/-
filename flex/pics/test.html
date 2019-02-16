@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .qqq {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jq.js"></script>
+    <script>
+        var a = $('<div class = "qqq"  >我是一行描述</div>')
+        var b = $('body')
+        b.append(a)
+        console.log(a)
+        var i = 1
+        a.css({
+            'backgroundImage': 'url(./' + i + '.png)'
+
+
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(209, 216, 226, .2);
+            margin: 50px;
+            margin-left: 200px;
+            position: relative;
+            perspective: 600px;
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            /* opacity: .2; */
+        }
+
+        .boxin {
+            transform-style: preserve-3d;
+            width: 400px;
+            height: 400px;
+            border: 1px solid blue;
+            border-radius: 5%;
+            /* margin: auto; */
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 50px;
+            animation: circle 4s linear infinite;
+            backface-visibility: visible;
+
+        }
+
+        .boxin:hover {
+            animation-play-state: paused;
+
+        }
+
+        @keyframes circle {
+            form {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .tower {
+            transform-style: preserve-3d;
+            position: absolute;
+            margin-left: 71px;
+            margin-top: 50px;
+            width: 258px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: skewX(90deg);
+            backface-visibility: visible;
+
+        }
+
+        .in {
+            position: absolute;
+            margin-left: -75px;
+            width: 150px;
+            height: 300px;
+            background-color: rgba(255, 0, 0, 0.5);
+            /* transform: rotateY(90deg); */
+            backface-visibility: visible;
+            /* transform-origin: bottom; */
+            transform: skewY(45deg) rotateY(90deg);
+            /*transform: rotateX(30deg); */
+        }
+
+        .tower1 {
+            transform: rotateY(60deg);
+        }
+
+        .tower2 {
+            transform: rotateY(120deg);
+        }
+
+        .tower3 {
+            transform: rotateY(180deg);
+        }
+
+        .tower4 {
+            transform: rotateY(240deg);
+        }
+
+        .tower5 {
+            transform: rotateY(300deg);
+        }
+
+        .tower6 {
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div class="boxin">
+            <div class="tower tower1">
+                <div class="in"></div>
+            </div>
+            <div class="tower tower2">
+                <div class="in"></div>
+            </div>
+            <div class="tower tower3">
+                <div class="in"></div>
+            </div>
+            <div class="tower tower4">
+                <div class="in"></div>
+            </div>
+            <div class="tower tower5">
+                <div class="in"></div>
+            </div>
+            <div class="tower tower6">
+                <div class="in"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="inner">
+            <li class="content start"> <span></span> </li>
+            <li class="content start"> <span></span> </li>
+            <li class="content start"> <span></span> </li>
+            <li class="content start"> <span></span> </li>
+            <li class="content start"> <span></span> </li>
+            <li class="content start"> <span></span> </li>
+        </ul>
+    </div>
+    <script>
+        let flag = true;
+        let ulInner = document.getElementsByClassName('wrapper')[0];
+        let conImg = document.getElementsByClassName('content');
+        for (let i = 0; i < conImg.length; i++) {
+            if (flag) {
+
+                conImg[i].onclick = function () {
+                    flag = false;
+                    if (!conImg[i].classList.contains('active')) {
+                        conImg[i].classList.add('active');
+                        ulInner.classList.add('wrapper-inner');
+                    } else {
+                        conImg[i].classList.remove('active');
+                        ulInner.classList.remove('wrapper-inner');
+                    }
+                    flag = true;
+                    //感觉加一个锁，没有达到自己想要的效果。
+                }
+            }
+        }
+
+        // 进入界面的函数
+
+        setTimeout(
+            function () {
+                let content = document.getElementsByClassName('content');
+                for (let i = 0; i < content.length; i++) {
+                    content[i].classList.remove('start');
+                }
+
+            }, 500
+        );
+    </script>
+</body>
+
+</html>
